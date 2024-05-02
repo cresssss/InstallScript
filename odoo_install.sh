@@ -62,17 +62,6 @@ else
     WKHTMLTOX_X32="https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.$(lsb_release -c -s)_i386.deb"
 fi
 
-#--------------------------------------------------
-# Update Server
-#--------------------------------------------------
-echo -e "\n---- Update Server ----"
-# universe package is for Ubuntu 18.x
-sudo add-apt-repository universe
-# libpng12-0 dependency for wkhtmltopdf for older Ubuntu versions
-sudo add-apt-repository "deb http://mirrors.kernel.org/ubuntu/ xenial main"
-sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt-get install libpq-dev
 
 #--------------------------------------------------
 # Install PostgreSQL Server
